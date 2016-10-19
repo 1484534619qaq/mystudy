@@ -26,5 +26,18 @@ namespace WebApplication3.Controllers
 
             return View();
         }
+        public ActionResult Welcome()
+        {
+            var a = 100;
+            var sum = 0;
+            for (var i = 1; i <= a; i++)
+            {
+                sum += i;
+                ViewBag.sum = sum;
+                return View();
+            }
+
+            return View();
+        }
     }
 }
