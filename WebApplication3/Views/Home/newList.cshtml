@@ -1,11 +1,14 @@
 ﻿@{
-    Layout = null;
+
     var newList = ViewBag.data as string[];
+    var curpage = (int)ViewBag.page;
+    var start = curpage - 3;
 }
 
 <!DOCTYPE html>
 
 <h2>List</h2>
+<h3>第@ViewBag.Page页</h3>
 
 <ol>
     @foreach (var item in newList)
@@ -22,5 +25,10 @@
     }
 </ol>
 
-
+<ol>
+    @for (int i = start; i < curpage+3; i++)
+    {
+        <li>  <a href="/Home/newList?page=@i">第 @i 页</a></li>
+    }
+</ol>
 

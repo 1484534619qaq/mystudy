@@ -39,7 +39,7 @@ namespace WebApplication3.Controllers
 
             return View();
         }
-        public ActionResult newList()
+        public ActionResult newList(int page=10)
         {
             string[] data = new string[] {
                 "斗鱼- 每个人的直播平台提供高清、快捷、流畅的视频直播和游戏",
@@ -50,10 +50,20 @@ namespace WebApplication3.Controllers
 
            
                 ViewBag.data = data;
-                return View();
+            ViewBag.Page = page;
+            return View();
             }
 
-         
-        
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        public ActionResult Save(string title,string content)
+        {
+            ViewBag.Title = title;
+            ViewBag.content = content;
+            return View();
+        }
     }
 }
