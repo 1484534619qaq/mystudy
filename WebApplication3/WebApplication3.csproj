@@ -272,10 +272,13 @@
     <Content Include="Views\Home\newList.cshtml" />
     <Content Include="Views\Home\Add.cshtml" />
     <Content Include="Views\Home\Save.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\AddArticle.cshtml" />
+    <Content Include="Views\Blog\Show.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
